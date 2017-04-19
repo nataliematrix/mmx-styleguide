@@ -1,4 +1,65 @@
-include ../includes/mixins
+{% import '../includes/macros.njk' as macros %}
+
+<div style="max-width:300px">
+	<div class="card card-default">
+		{{ macros.imgph("3x2", class='img-circle', alt="Card top image") }}
+		<div class="card-block">
+			<h4 class="card-title">Card title</h4>
+			<p class="card-text">
+  			Somequick example text to build on the card title and make up the bulk of the card's content.</Some>
+			</p>
+			<a href="#" class="btn btn-primary">Button</a>
+		</div>
+	</div>
+
+	<h3>Simple card</h3>
+
+	<div class="card card-default">
+		{{ macros.imgph("3x2", class='img-circle', alt="Card top image") }}
+		<div class="card-block">
+			<h4 class="card-title">Card title</h4>
+			<p class="card-text">
+  			Somequick example text to build on the card title and make up the bulk of the card's content.</Some>
+			</p>
+			<a href="#" class="btn btn-primary">Button</a>
+		</div>
+	</div>
+
+	<h3>Card with title and text</h3>
+	<div class="card card-block card-default">
+	  <h4 class="card-title">Card title</h4>
+	  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	  <a href="#" class="card-link">Card link</a>
+	  <a href="#" class="card-link">Another link</a>
+	</div>
+
+	<h3>Card with header and footer</h3>
+	<div class="card text-center card-default">
+	  <div class="card-header">Featured</div>
+	  <div class="card-block">
+	    <h4 class="card-title">Special title treatment</h4>
+	    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+	    <a href="#" class="btn btn-primary">Go somewhere</a>
+	  </div>
+	  <div class="card-footer text-muted">2 days ago</div>
+	</div>
+
+	<h3>Card with background image</h3>
+	<div class="card card-inverse">
+		{{ macros.imgph("3x2", "3x2", "#333", "666", alt="Card top image") }}
+		<div class="card-img-overlay">
+		  <h4 class="card-title">Card title</h4>
+		  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		  <p class="card-text">
+		    <small class="text-muted">Last updated 3 mins ago</small>
+		  </p>
+		</div>
+	</div>
+
+</div>
+
+
+{# include ../includes/mixins
 
 div(style="max-width:300px")
 
@@ -106,4 +167,4 @@ div(style="max-width:300px")
 				| Danger
 				+lipsum-words(3)
 			p.card-text
-				+lipsum-words(20)
+				+lipsum-words(20) #}
